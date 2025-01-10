@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="index3.html">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Shop Checkout</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        .checkout-section {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .form-container, .summary-container {
+            flex: 1;
+        }
+
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-container label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-container input, .form-container select {
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-container input[type="submit"] {
+            background-color: #ff3366;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #ff5c8f;
+        }
+
+        .summary-container {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .summary-container h3 {
+            margin-top: 0;
+        }
+
+        .order-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .order-item span {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .order-item-total {
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: right;
+        }
+
+        .total-price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff3366;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Checkout</h1>
+
+    <div class="checkout-section">
+
+        <!-- Form Container -->
+        <div class="form-container">
+            <h3>Shipping Information</h3>
+            <form action="/process_checkout" method="POST">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" required>
+
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" required>
+
+                <label for="address">Shipping Address</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" required>
+
+                <label for="state">State</label>
+                <select id="state" name="state" required>
+                    <option value="">Select State</option>
+                    <option value="ny">GUJRAT</option>
+                    <option value="ca">RAJASTHAN</option>
+                    <option value="tx">PUNJAB</option>
+                    <!-- Add more states as needed -->
+                </select>
+
+                <label for="zip">Zip Code</label>
+                <input type="text" id="zip" name="zip" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <input type="submit" value="Proceed to Payment">
+            </form>
+        </div>
+
+        <!-- Summary Container -->
+        <div class="summary-container">
+            <h3>Order Summary</h3>
+            <div class="order-item">
+                <span>Romentic Roses (x1)</span>
+                <span>$40.00</span>
+            </div>
+            <div class="order-item">
+                <span>Delivery Fee</span>
+                <span>$5.00</span>
+            </div>
+
+            <div class="order-item-total">
+                <span>Total</span>
+                <span>$45.00</span>
+            </div>
+
+            <div class="total-price">
+                <span>Total Price: $45.00</span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
+
+</body>
+</html>
